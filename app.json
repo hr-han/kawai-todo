@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "Kawai To Do",
+    "name": "Daily To Do",
     "slug": "kawai-todo",
+    "sdkVersion": "37.0.0",
     "platforms": [
       "ios",
       "android",
@@ -22,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.softwiz.todo"
+    },
+    "android": {
+      "package": "com.softwiz.todo"
     },
     "description": ""
   }

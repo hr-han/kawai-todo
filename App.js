@@ -38,7 +38,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <Text style={styles.title}>Kawai To Do</Text>
+        <Text style={styles.title}>Daily To Do</Text>
         <View style={styles.card}>
           <TextInput
             style={styles.input}
@@ -49,6 +49,7 @@ export default class App extends React.Component {
             returnKeyType={"done"}
             autoCorrect={false}
             onSubmitEditing={this._addToDo}
+            underlineColorAndroid={"transparent"}
           />
           <ScrollView contentContainerStyle={styles.toDos}>
             {JSON.stringify(toDos) !== {} && JSON.stringify(toDos) !== "null" &&
@@ -83,12 +84,11 @@ export default class App extends React.Component {
       const parsedToDos = JSON.parse(toDos);
       this.setState({
         loadedToDos: true,
-        toDos: parsedToDos
+        toDos: parsedToDos || {}
       });
     } catch (error) {
       console.log(error);
     }
-
   };
 
   _addToDo = () => {

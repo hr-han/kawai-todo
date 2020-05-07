@@ -55,6 +55,7 @@ export default class ToDo extends Component {
                              returnKeyType={"done"}
                              onBlur={this._finishEditing}
                              autoCorrect={false}
+                             underlineColorAndroid={"transparent"}
                            />
                          ) : (
                            <Text
